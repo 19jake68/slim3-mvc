@@ -10,6 +10,9 @@ class BaseController
 	protected $logger;
 	protected $flash;
 	
+	/**
+	 * Instantiate Base controller
+	 */
 	public function __construct(Container $c)
 	{
 		$this->view = $c->get('view');
