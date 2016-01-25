@@ -24,6 +24,7 @@
 		"monolog/monolog": "^1.17",
 		"slim/csrf": "^0.6.0",
 		"illuminate/database": "^5.2",
-		"slim/http-cache": "^0.3.0"
+		"slim/http-cache": "^0.3.0",
+		"knplabs/gaufrette": "~0.2"
 	}
 }

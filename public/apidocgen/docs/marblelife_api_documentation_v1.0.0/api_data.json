@@ -1,0 +1,1022 @@
+[
+  {
+    "type": "post",
+    "url": "/marble/{id}/goal",
+    "title": "Add Goal",
+    "version": "1.0.0",
+    "name": "Add_Goal",
+    "description": "<p>Adds new marble goal.</p>",
+    "group": "Goal",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"count\": Int,\n  \"max_count\": Int,\n  \"text\": String,\n  \"completed_date\": null|DateTime,\n  \"created_date\": DateTime,\n  \"modified_date\": DateTime\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"id\": String,\n  \"count\": String,\n  \"max_count\": String,\n  \"text\": String,\n  \"created_date\": DateTime,\n  \"modified_date\": DateTime,\n  \"marble_id\": String,\n  \"completed_date\": null|DateTime,\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Goal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "post",
+    "url": "/marble/{id}/goal/{goalId}/photo",
+    "title": "Add Photo",
+    "version": "1.0.0",
+    "name": "Add_Photo",
+    "description": "<p>Adds new photo to marble goal.</p>",
+    "group": "Goal",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"key\": String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Goal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "delete",
+    "url": "/goal/{id}",
+    "title": "Delete Goal",
+    "version": "1.0.0",
+    "name": "Delete_Goal",
+    "description": "<p>Deletes specific goal from marble.</p>",
+    "group": "Goal",
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Goal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/marble/{id}/goal/{goalId}/photo",
+    "title": "Fetch Photos",
+    "version": "1.0.0",
+    "name": "Fetch_Photos",
+    "description": "<p>Fetches marble goal photos.</p>",
+    "group": "Goal",
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Goal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/goal/{id}",
+    "title": "Get Goal Info",
+    "version": "1.0.0",
+    "name": "Get_Goal_Info",
+    "description": "<p>Gets specific goal info.</p>",
+    "group": "Goal",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"id\": String,\n  \"count\": String,\n  \"max_count\": String,\n  \"text\": String,\n  \"created_date\": DateTime,\n  \"modified_date\": DateTime,\n  \"marble_id\": String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Goal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/marble/{id}/goal",
+    "title": "List Goals",
+    "version": "1.0.0",
+    "name": "List_Goals",
+    "description": "<p>Lists marble goals.</p>",
+    "group": "Goal",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n  {\n    \"id\": String,\n    \"count\": String,\n    \"max_count\": String,\n    \"source\": String,\n    \"text\": String,\n    \"created_date\": DateTime,\n    \"modified_date\": DateTime,\n    \"marble_id\": String\n    \"completed_date\": null|DateTime,\n  },\n  ...\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Goal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "patch",
+    "url": "/goal/{id}",
+    "title": "Update Goal",
+    "version": "1.0.0",
+    "name": "Update_Goal",
+    "description": "<p>Modifies specific goal.</p>",
+    "group": "Goal",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  (optional) \"count\": Int,\n  (optional) \"max_count\": Int,\n  (optional) \"text\": String,\n  (optional) \"completed_date\": DateTime,\n  (optional) \"created_date\": DateTime,\n  (optional) \"modified_date\": DateTime\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Goal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "delete",
+    "url": "/journal/{id}",
+    "title": "Delete",
+    "version": "1.0.0",
+    "name": "Delete",
+    "description": "<p>Deletes a specific journal</p>",
+    "group": "Journal",
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Journal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/journal/{id}",
+    "title": "Get",
+    "version": "1.0.0",
+    "name": "Get",
+    "description": "<p>Gets a specific journal.</p>",
+    "group": "Journal",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"id\": String,\n  \"title\": String,\n  \"text\": String,\n  \"created_date\": DateTime,\n  \"modified_date\": DateTime,\n  \"marble_id\": String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Journal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/marble/{id}/journal",
+    "title": "List",
+    "version": "1.0.0",
+    "name": "List",
+    "description": "<p>Gets all marble journals.</p>",
+    "group": "Journal",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n  {\n    \"id\": String,\n    \"title\": String,\n    \"text\": String,\n    \"created_date\": DateTime,\n    \"modified_date\": DateTime,\n    \"marble_id\": String\n  }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Journal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "post",
+    "url": "/marble/{id}/journal",
+    "title": "Update",
+    "version": "1.0.0",
+    "name": "Update",
+    "description": "<p>Updates specific journal</p>",
+    "group": "Journal",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"title\": String,\n  \"text\": String,\n  \"created_date\": DateTime,\n  \"modified_date\": DateTime\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"id\": String,\n  \"title\": String,\n  \"text\": String,\n  \"created_date\": DateTime,\n  \"modified_date\": DateTime,\n  \"marble_id\": String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Journal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "patch",
+    "url": "/journal/{id}",
+    "title": "Update",
+    "version": "1.0.0",
+    "name": "Update",
+    "description": "<p>Modifies a specific journal</p>",
+    "group": "Journal",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  (optional) \"title\": String,\n  (optional) \"text\": String,\n  (optional) \"created_date\": DateTime,\n  (optional) \"modified_date\": DateTime\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Journal",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "delete",
+    "url": "/lifeaction/{id}",
+    "title": "Delete",
+    "version": "1.0.0",
+    "name": "Delete",
+    "description": "<p>Deletes specific life action.</p>",
+    "group": "Life_Action",
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Life_Action",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/lifeaction/{id}",
+    "title": "Get",
+    "version": "1.0.0",
+    "name": "Get",
+    "description": "<p>Gets specific life action.</p>",
+    "group": "Life_Action",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"id\": String,\n  \"message\": String,\n  \"modified_date\": Datetime,\n  \"created_date\": Datetime,\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Life_Action",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/lifeaction",
+    "title": "List",
+    "version": "1.0.0",
+    "name": "List",
+    "description": "<p>Gets all life actions.</p>",
+    "group": "Life_Action",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n  {\n    \"id\": String,\n    \"message\": String,\n    \"modified_date\": Datetime,\n    \"created_date\": Datetime,\n  },\n  ...\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Life_Action",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "post",
+    "url": "/marble",
+    "title": "Add",
+    "version": "1.0.0",
+    "name": "Add",
+    "description": "<p>Adds new marble.</p>",
+    "group": "Marble",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"week\": DateTime,\n  \"quote_id\": Int,\n  \"lifeaction_id\": Int\n  (optional) \"goal\": [ @see POST /marble/{id}/goal/ format ],\n  (optional) \"journal\": [ @see POST /marble/{id}/journal format ],\n  \"created_date\": DateTime,\n  \"modified_date\": DateTime,\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Marble",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "delete",
+    "url": "/marble/{id}",
+    "title": "Delete",
+    "version": "1.0.0",
+    "name": "Delete",
+    "description": "<p>Deletes specific marble. (Is this possible?)</p>",
+    "group": "Marble",
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Marble",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/marble",
+    "title": "List",
+    "version": "1.0.0",
+    "name": "List",
+    "description": "<p>Gets list of marbles.</p>",
+    "group": "Marble",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n[\n  {\n    \"id\": String,\n    \"week\": DateTime,\n    \"marbletexture_id\": String,\n    \"quote_id\": String,\n    \"user_id\": String,\n    \"created_date\": DateTime,\n    \"modified_date\": DateTime,\n  },\n  ...\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Marble",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "patch",
+    "url": "/marble/{id}",
+    "title": "Update",
+    "version": "1.0.0",
+    "name": "Update",
+    "description": "<p>Modifies specific marble.</p>",
+    "group": "Marble",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"week\": DateTime,\n  \"quote_id\": Int,\n  \"lifeaction_id\": Int\n  \"created_date\": DateTime,\n  \"modified_date\": DateTime,\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "Marble",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "delete",
+    "url": "/user",
+    "title": "Delete",
+    "version": "1.0.0",
+    "name": "Delete",
+    "description": "<p>Deletes user defined by password or facebook token.</p>",
+    "group": "User",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example (Email Address):",
+          "content": "{\n  \"type\": \"email\",\n  \"email\": String,\n  \"password\": String\n}",
+          "type": "json"
+        },
+        {
+          "title": "Request-Example (Facebook):",
+          "content": "{\n  \"type\": \"facebook\",\n  \"access_token\": String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "User"
+  },
+  {
+    "type": "get",
+    "url": "/user",
+    "title": "Get User Info",
+    "version": "1.0.0",
+    "name": "Get_User_Info",
+    "description": "<p>Gets current user info.</p>",
+    "group": "User",
+    "filename": "raw/api.v1.js",
+    "groupTitle": "User",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "post",
+    "url": "/session",
+    "title": "Login",
+    "version": "1.0.0",
+    "name": "Login",
+    "description": "<p>Users login via Email or via Facebook. Returns App access token.</p>",
+    "group": "User",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example (Email Address):",
+          "content": "{\n  \"type\": \"email\",\n  \"email\": String,\n  \"password\": String\n}",
+          "type": "json"
+        },
+        {
+          "title": "Request-Example (Facebook):",
+          "content": "{\n  \"type\": \"facebook\",\n  \"access_token\": String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"id\": String,\n  \"week\": DateTime,\n  \"marbletexture_id\": String,\n  \"quote_id\": String,\n  \"user_id\": String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "User"
+  },
+  {
+    "type": "delete",
+    "url": "/session",
+    "title": "Logout",
+    "version": "1.0.0",
+    "name": "Logout",
+    "description": "<p>Deletes the session token and logs the user out.</p>",
+    "group": "User",
+    "filename": "raw/api.v1.js",
+    "groupTitle": "User",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "post",
+    "url": "/user",
+    "title": "Signup",
+    "version": "1.0.0",
+    "name": "Signup",
+    "description": "<p>Users initial login to MarbleLife app.</p>",
+    "group": "User",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example (Email Address):",
+          "content": "{\n  \"type\": \"email\",\n  \"email\": String,\n  \"password\": String,\n  \"first_name\": String,\n  \"last_name\": String,\n  \"birth_date\": DateTime,\n  \"death_date\": DateTime,\n  (optional) \"country\": String,\n  (optional) \"state\": String\n}",
+          "type": "json"
+        },
+        {
+          "title": "Request-Example (Facebook):",
+          "content": "{\n  \"type\": \"facebook\",\n  \"access_token\": String,\n  \"first_name\": String,\n  \"last_name\": String,\n  \"birth_date\": DateTime,\n  \"death_date\": DateTime,\n  (optional) \"country\": String,\n  (optional) \"state\": String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"id\": String,\n  \"first_name\": String,\n  \"last_name\": String,\n  \"birth_date\": DateTime,\n  \"death_date\": DateTime,\n  \"created_date\": DateTime,\n  \"modified_date\": DateTime\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "User"
+  },
+  {
+    "type": "patch",
+    "url": "/user",
+    "title": "Update User",
+    "version": "1.0.0",
+    "name": "Update_User",
+    "description": "<p>Modifies user info.</p>",
+    "group": "User",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  (optional) \"first_name\": String,\n  (optional) \"last_name\": String,\n  (optional) \"birth_date\": DateTime,\n  (optional) \"death_date\": DateTime,\n  (optional) \"country\": String,\n  (optional) \"state\": String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "User",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "authorization",
+            "description": "<p>Authorization value.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response (Unauthorize):",
+          "content": "{\n  \"message\": \"Unauthorized.\",\n  \"code\": 401\n}",
+          "type": "json"
+        }
+      ]
+    }
+  },
+  {
+    "type": "put",
+    "url": "/user",
+    "title": "Verify User",
+    "version": "1.0.0",
+    "name": "Verify_User",
+    "description": "<p>Verifies user's email address and send the password reset link to the email provided.</p>",
+    "group": "User",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n  \"email\": String,\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"email\": String,\n  \"message\": String\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "raw/api.v1.js",
+    "groupTitle": "User"
+  },
+  {
+    "type": "",
+    "url": "@apiVersion",
+    "title": "1.0.0",
+    "name": "_apiDescription",
+    "group": "_apiParamExample",
+    "success": {
+      "examples": [
+        {
+          "title": "@apiUse HttpError",
+          "content": "@apiUse HttpError",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "raw/api.v1.js",
+    "groupTitle": "_apiParamExample"
+  }
+]

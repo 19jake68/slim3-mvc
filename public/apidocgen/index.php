@@ -17,8 +17,10 @@ include __DIR__ . '/../common.php';
 /**
  * Define the base directory of the current application
  */
+define('APP_NAME', 'apidocgen');
 define('APP_ENV', APP_ENV_DEVELOPMENT);
-define('APP_DIR', BASE_DIR . '/app/apidocgen');
+define('APP_DIR', BASE_DIR . '/app/' . APP_NAME);
+define('PUBLIC_DIR', BASE_DIR . '/public/' . APP_NAME);
 
 // Start PHP session
 session_start();

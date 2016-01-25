@@ -76,6 +76,13 @@
 								<h3>General</h3>
 								<ul class="nav side-menu">
 									<li><a href="{{base_url()}}"><i class="fa fa-home"></i> Home</a></li>
+									<li>
+										<a href="javascript:void(0);"><i class="fa fa-edit"></i> Documentations <span class="fa fa-chevron-down"></span></a>
+										<ul class="nav child_menu" style="display:none">
+											<li><a href="{{path_for('documentation')}}"> List Documentation</a></li>
+											<li><a href="{{path_for('addDoc')}}"> Add New Documentation</a></li>
+										</ul>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -112,7 +119,7 @@
 							<ul class="nav navbar-nav navbar-right">
 								<li class="">
 									<a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-										<img src="images/img.jpg" alt="" />Antonio Luna
+										<img src="{{base_url()}}/images/img.jpg" alt="" />Antonio Luna
 										<span class="fa fa-angle-down"></span>
 									</a>
 									<ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">

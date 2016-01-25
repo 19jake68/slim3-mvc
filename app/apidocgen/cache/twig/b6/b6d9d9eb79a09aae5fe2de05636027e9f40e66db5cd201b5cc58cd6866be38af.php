@@ -137,6 +137,19 @@ class __TwigTemplate_d49e451462be7867e022a0104c7be1ddc557fc4689a614f287374327553
         // line 78
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->baseUrl(), "html", null, true);
         echo "\"><i class=\"fa fa-home\"></i> Home</a></li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0);\"><i class=\"fa fa-edit\"></i> Documentations <span class=\"fa fa-chevron-down\"></span></a>
+\t\t\t\t\t\t\t\t\t\t<ul class=\"nav child_menu\" style=\"display:none\">
+\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"";
+        // line 82
+        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->pathFor("documentation"), "html", null, true);
+        echo "\"> List Documentation</a></li>
+\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"";
+        // line 83
+        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->pathFor("addDoc"), "html", null, true);
+        echo "\"> Add New Documentation</a></li>
+\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -154,7 +167,7 @@ class __TwigTemplate_d49e451462be7867e022a0104c7be1ddc557fc4689a614f287374327553
 \t\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-eye-close\" aria-hidden=\"true\"></span>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t<a href=\"";
-        // line 95
+        // line 102
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->pathFor("logout"), "html", null, true);
         echo "\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Logout\">
 \t\t\t\t\t\t\t\t<span class=\"glyphicon glyphicon-off\" aria-hidden=\"true\"></span>
@@ -176,7 +189,10 @@ class __TwigTemplate_d49e451462be7867e022a0104c7be1ddc557fc4689a614f287374327553
 \t\t\t\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">
 \t\t\t\t\t\t\t\t<li class=\"\">
 \t\t\t\t\t\t\t\t\t<a href=\"javascript:;\" class=\"user-profile dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"false\">
-\t\t\t\t\t\t\t\t\t\t<img src=\"images/img.jpg\" alt=\"\" />Antonio Luna
+\t\t\t\t\t\t\t\t\t\t<img src=\"";
+        // line 122
+        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->baseUrl(), "html", null, true);
+        echo "/images/img.jpg\" alt=\"\" />Antonio Luna
 \t\t\t\t\t\t\t\t\t\t<span class=\"fa fa-angle-down\"></span>
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu dropdown-usermenu animated fadeInDown pull-right\">
@@ -190,7 +206,7 @@ class __TwigTemplate_d49e451462be7867e022a0104c7be1ddc557fc4689a614f287374327553
 \t\t\t\t\t\t\t\t\t\t<li><a href=\"javascript:;\">Help</a></li>
 \t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 128
+        // line 135
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->pathFor("logout"), "html", null, true);
         echo "\"><i class=\"fa fa-sign-out pull-right\"></i> Log Out</a>
 \t\t\t\t\t\t\t\t\t\t</li>
@@ -206,16 +222,16 @@ class __TwigTemplate_d49e451462be7867e022a0104c7be1ddc557fc4689a614f287374327553
 \t\t\t\t<div class=\"right_col\" role=\"main\">
 \t\t\t\t\t<!-- main content -->
 \t\t\t\t\t";
-        // line 141
+        // line 148
         $this->displayBlock('content', $context, $blocks);
-        // line 143
+        // line 150
         echo "\t\t\t\t\t<!-- /main content -->
 \t\t\t\t
 \t\t\t\t\t<!-- footer content -->
 \t\t\t\t\t<footer>
 \t\t\t\t\t\t<div class=\"\">
 \t\t\t\t\t\t\t<p class=\"pull-right\">";
-        // line 148
+        // line 155
         echo twig_escape_filter($this->env, (isset($context["siteTitle"]) ? $context["siteTitle"] : null), "html", null, true);
         echo " is a Bootstrap 3 template. | <a href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->baseUrl(), "html", null, true);
@@ -235,28 +251,28 @@ class __TwigTemplate_d49e451462be7867e022a0104c7be1ddc557fc4689a614f287374327553
 \t\t
 \t\t<!-- BEGIN SCRIPTS -->
 \t\t<script src=\"";
-        // line 161
+        // line 168
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->baseUrl(), "html", null, true);
         echo "/js/bootstrap.min.js\"></script>
 \t\t
 \t\t<!-- bootstrap progress js -->
 \t\t<script src=\"";
-        // line 164
+        // line 171
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->baseUrl(), "html", null, true);
         echo "/js/progressbar/bootstrap-progressbar.min.js\"></script>
 \t\t<script src=\"";
-        // line 165
+        // line 172
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->baseUrl(), "html", null, true);
         echo "/js/nicescroll/jquery.nicescroll.min.js\"></script>
 
 \t\t<script src=\"";
-        // line 167
+        // line 174
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->baseUrl(), "html", null, true);
         echo "/js/custom.js\"></script>\t\t
 \t\t";
-        // line 168
+        // line 175
         $this->displayBlock('script', $context, $blocks);
-        // line 170
+        // line 177
         echo "\t\t<script>
 \t\t\tNProgress.done();
 \t\t</script>
@@ -272,17 +288,17 @@ class __TwigTemplate_d49e451462be7867e022a0104c7be1ddc557fc4689a614f287374327553
         echo "\t\t";
     }
 
-    // line 141
+    // line 148
     public function block_content($context, array $blocks = array())
     {
-        // line 142
+        // line 149
         echo "\t\t\t\t\t";
     }
 
-    // line 168
+    // line 175
     public function block_script($context, array $blocks = array())
     {
-        // line 169
+        // line 176
         echo "\t\t";
     }
 
@@ -298,7 +314,7 @@ class __TwigTemplate_d49e451462be7867e022a0104c7be1ddc557fc4689a614f287374327553
 
     public function getDebugInfo()
     {
-        return array (  286 => 169,  283 => 168,  279 => 142,  276 => 141,  272 => 43,  269 => 42,  260 => 170,  258 => 168,  254 => 167,  249 => 165,  245 => 164,  239 => 161,  219 => 148,  212 => 143,  210 => 141,  194 => 128,  158 => 95,  138 => 78,  119 => 62,  107 => 55,  94 => 44,  92 => 42,  77 => 30,  73 => 29,  66 => 25,  62 => 24,  58 => 23,  52 => 20,  48 => 19,  44 => 18,  28 => 5,  22 => 1,);
+        return array (  302 => 176,  299 => 175,  295 => 149,  292 => 148,  288 => 43,  285 => 42,  276 => 177,  274 => 175,  270 => 174,  265 => 172,  261 => 171,  255 => 168,  235 => 155,  228 => 150,  226 => 148,  210 => 135,  194 => 122,  171 => 102,  149 => 83,  145 => 82,  138 => 78,  119 => 62,  107 => 55,  94 => 44,  92 => 42,  77 => 30,  73 => 29,  66 => 25,  62 => 24,  58 => 23,  52 => 20,  48 => 19,  44 => 18,  28 => 5,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -379,6 +395,13 @@ class __TwigTemplate_d49e451462be7867e022a0104c7be1ddc557fc4689a614f287374327553
 /* 								<h3>General</h3>*/
 /* 								<ul class="nav side-menu">*/
 /* 									<li><a href="{{base_url()}}"><i class="fa fa-home"></i> Home</a></li>*/
+/* 									<li>*/
+/* 										<a href="javascript:void(0);"><i class="fa fa-edit"></i> Documentations <span class="fa fa-chevron-down"></span></a>*/
+/* 										<ul class="nav child_menu" style="display:none">*/
+/* 											<li><a href="{{path_for('documentation')}}"> List Documentation</a></li>*/
+/* 											<li><a href="{{path_for('addDoc')}}"> Add New Documentation</a></li>*/
+/* 										</ul>*/
+/* 									</li>*/
 /* 								</ul>*/
 /* 							</div>*/
 /* 						</div>*/
@@ -415,7 +438,7 @@ class __TwigTemplate_d49e451462be7867e022a0104c7be1ddc557fc4689a614f287374327553
 /* 							<ul class="nav navbar-nav navbar-right">*/
 /* 								<li class="">*/
 /* 									<a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">*/
-/* 										<img src="images/img.jpg" alt="" />Antonio Luna*/
+/* 										<img src="{{base_url()}}/images/img.jpg" alt="" />Antonio Luna*/
 /* 										<span class="fa fa-angle-down"></span>*/
 /* 									</a>*/
 /* 									<ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">*/

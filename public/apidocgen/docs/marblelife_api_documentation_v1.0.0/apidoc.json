@@ -1,0 +1,11 @@
+{
+    "name": "MarbleLife API Documentation v1.0.0",
+    "version": "1.0.0",
+    "description": "Documentation for MarbleLife REST API Methods",
+    "title": "MarbleLife API Documentation v1.0.0",
+    "url": "http:\/\/128.199.156.89",
+    "header": {
+        "title": "Sample Header",
+        "filename": "header.md"
+    }
+}

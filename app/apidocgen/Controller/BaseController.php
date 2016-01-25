@@ -34,7 +34,7 @@ class BaseController
 	 */
 	protected function redirectTo(Response $response, $name, array $data = [], array $queryParams = [])
 	{
-		$url = $this->router->pathFor($name, $data, $queryParams);
+		$url = (strstr($name, '/')) ? $name : $this->router->pathFor($name, $data, $queryParams);
 		return $response->withStatus(301)->withHeader('Location', $url);
 	}
 	
