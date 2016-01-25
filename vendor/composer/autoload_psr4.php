@@ -13,6 +13,7 @@ return array(
     'Slim\\Flash\\' => array($vendorDir . '/slim/flash/src'),
     'Slim\\Csrf\\' => array($vendorDir . '/slim/csrf/src'),
     'Slim\\' => array($vendorDir . '/slim/slim/Slim'),
+    'Sample\\' => array($baseDir . '/app/sample'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Interop\\Container\\' => array($vendorDir . '/container-interop/container-interop/src/Interop/Container'),
@@ -22,7 +23,5 @@ return array(
     'Illuminate\\Container\\' => array($vendorDir . '/illuminate/container'),
     'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
-    'App\\Model\\' => array($baseDir . '/app/sample/models'),
-    'App\\Middleware\\' => array($baseDir . '/app/sample/middlewares'),
-    'App\\Controller\\' => array($baseDir . '/app/sample/controllers'),
+    'APIDocGen\\' => array($baseDir . '/app/apidocgen'),
 );
