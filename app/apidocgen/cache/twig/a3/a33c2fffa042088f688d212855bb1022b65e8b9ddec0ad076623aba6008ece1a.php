@@ -1,7 +1,7 @@
 <?php
 
-/* ./layouts/layout1.twig */
-class __TwigTemplate_d173d21c2edb62231ff05ec72d8b0800e6b2a8cffe2694332ab43aada2e455a5 extends Twig_Template
+/* ./layouts/layout-login.twig */
+class __TwigTemplate_78ceb1330e6b49d6c12ba141d4365a883a6477d8fe0938905e836e67b8162cc9 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -12,6 +12,7 @@ class __TwigTemplate_d173d21c2edb62231ff05ec72d8b0800e6b2a8cffe2694332ab43aada2e
         $this->blocks = array(
             'style' => array($this, 'block_style'),
             'content' => array($this, 'block_content'),
+            'script' => array($this, 'block_script'),
         );
     }
 
@@ -80,11 +81,16 @@ class __TwigTemplate_d173d21c2edb62231ff05ec72d8b0800e6b2a8cffe2694332ab43aada2e
         $this->displayBlock('style', $context, $blocks);
         // line 39
         echo "\t</head>
-\t<body class=\"nav-md\">
+\t<body style=\"background:#F7F7F7;\">
 \t\t";
         // line 41
         $this->displayBlock('content', $context, $blocks);
         // line 43
+        echo "\t\t
+\t\t";
+        // line 44
+        $this->displayBlock('script', $context, $blocks);
+        // line 46
         echo "\t</body>
 </html>";
     }
@@ -103,9 +109,16 @@ class __TwigTemplate_d173d21c2edb62231ff05ec72d8b0800e6b2a8cffe2694332ab43aada2e
         echo "\t\t";
     }
 
+    // line 44
+    public function block_script($context, array $blocks = array())
+    {
+        // line 45
+        echo "\t\t";
+    }
+
     public function getTemplateName()
     {
-        return "./layouts/layout1.twig";
+        return "./layouts/layout-login.twig";
     }
 
     public function isTraitable()
@@ -115,7 +128,7 @@ class __TwigTemplate_d173d21c2edb62231ff05ec72d8b0800e6b2a8cffe2694332ab43aada2e
 
     public function getDebugInfo()
     {
-        return array (  103 => 42,  100 => 41,  96 => 38,  93 => 37,  88 => 43,  86 => 41,  82 => 39,  80 => 37,  68 => 28,  61 => 24,  57 => 23,  51 => 20,  47 => 19,  43 => 18,  27 => 5,  21 => 1,);
+        return array (  116 => 45,  113 => 44,  109 => 42,  106 => 41,  102 => 38,  99 => 37,  94 => 46,  92 => 44,  89 => 43,  87 => 41,  83 => 39,  81 => 37,  69 => 28,  62 => 24,  58 => 23,  52 => 20,  48 => 19,  44 => 18,  28 => 5,  22 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -157,8 +170,11 @@ class __TwigTemplate_d173d21c2edb62231ff05ec72d8b0800e6b2a8cffe2694332ab43aada2e
 /* 		{% block style %}*/
 /* 		{% endblock style %}*/
 /* 	</head>*/
-/* 	<body class="nav-md">*/
+/* 	<body style="background:#F7F7F7;">*/
 /* 		{% block content %}*/
 /* 		{% endblock content %}*/
+/* 		*/
+/* 		{% block script %}*/
+/* 		{% endblock script %}*/
 /* 	</body>*/
 /* </html>*/

@@ -8,7 +8,7 @@ class __TwigTemplate_1b13ec3135b5cf8718b7bd522d5d7d44e4a7529c0fa1d631cb43ffe1b5e
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("./layouts/layout1.twig", "admin/login.twig", 1);
+        $this->parent = $this->loadTemplate("./layouts/layout-login.twig", "admin/login.twig", 1);
         $this->blocks = array(
             'content' => array($this, 'block_content'),
         );
@@ -16,7 +16,7 @@ class __TwigTemplate_1b13ec3135b5cf8718b7bd522d5d7d44e4a7529c0fa1d631cb43ffe1b5e
 
     protected function doGetParent(array $context)
     {
-        return "./layouts/layout1.twig";
+        return "./layouts/layout-login.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -100,7 +100,7 @@ class __TwigTemplate_1b13ec3135b5cf8718b7bd522d5d7d44e4a7529c0fa1d631cb43ffe1b5e
         return array (  69 => 24,  59 => 19,  53 => 18,  49 => 17,  36 => 7,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
-/* {% extends './layouts/layout1.twig' %}*/
+/* {% extends './layouts/layout-login.twig' %}*/
 /* */
 /* {% block content %}*/
 /* <div id="wrapper">*/
