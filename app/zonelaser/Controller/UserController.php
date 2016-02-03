@@ -11,28 +11,34 @@ final class UserController extends BaseController
 {
 	public function index(Request $request, Response $response, $args)
 	{
-		echo 1;
-		exit;
-		//85c4110a4fb15c1a8dc2e1c0ec9381f2
-		$email = 'comments@planetzeon.com';
-		$password = 'test';
-		echo  json_encode($request);
-		exit;
-		$dataUser = User::where( 'Email', $email )->first();
-		if($dataUser){
-			$passEnc = md5($password);
-			$dataUserPrefs = UserPrefs::where( ['OMemb_ID'=> $dataUser->OMemb_ID, 'Password' => $passEnc] )->first();
-			//$this->trace($dataUserPrefs);
-			if($dataUserPrefs)
-			{
-				echo $dataUser;
-			}
-		}
+		
+		
+		//Response does not contain any data.
 	}
 
+	private function errorResponse($msg){
+		return json_encode(['response' => $msg, 'success' => 0]);
+	}
+	private function successResponse($data){
+		return json_encode(['data' => $data, 'success' => 1]);
+	}
 	public function login(Request $request, Response $response, $args)
 	{
+		$dataRequest = $request->getParsedBody();
 
+		$dataUser = User::where( 'Email', $dataRequest['email'] )->first();
+		if($dataUser){
+			
+			$dataUserPrefs = UserPrefs::where( ['OMemb_ID'=> $dataUser->OMemb_ID, 'Password' =>  md5($dataRequest['password'])] )->first();
+			if($dataUserPrefs)
+			{
+				echo $this->successResponse( $dataUser );
+			}else{
+				echo $this->errorResponse('Username and password do not match');
+			}
+		}else{
+			echo $this->errorResponse('Username and password do not match');
+		}
 	}
 
 }

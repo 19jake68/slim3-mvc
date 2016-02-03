@@ -1,7 +1,7 @@
 <?php
 
 // Login
-$app->map(['GET', 'POST'], '/login', 'APIDocGen\Controller\AdminController:login')->setName('login');
+$app->map(['GET', 'POST'], '/admin/login', 'APIDocGen\Controller\AdminController:login')->setName('login');
 
 // Logout
 $app->get('/logout', 'APIDocGen\Controller\AdminController:logout')->setName('logout');

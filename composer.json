@@ -15,7 +15,8 @@
 		"psr-4": {
 			"Sample\\": "app/sample",
 			"APIDocGen\\": "app/apidocgen",
-			"ZoneLaser\\": "app/zonelaser"
+			"ZoneLaser\\": "app/zonelaser",
+			"ZoneLaserCms\\": "app/zonelasercms"
 		}
 	},
 	"require": {
